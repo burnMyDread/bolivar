@@ -16,7 +16,8 @@ class SideBar extends Module{
         support { $('#tasks > div:nth-child(7) > a.task-link')}
         analytics_dashboard { $('#tasks > div:nth-child(8) > a.task-link')}
         my_views { $('#tasks > div:nth-child(9) > a.task-link')}
-        credentials { $('#tasks > div:nth-child(10) > a.task-link')}
-        cluster_operations { $('#tasks > div:nth-child(11) > a.task-link')}
+        blue_ocean { $('#tasks > div:nth-child(10) > a.task-link')}
+        credentials { $('#tasks > div:nth-child(11) > a.task-link')}
+        cluster_operations { $('#tasks > div:nth-child(12) > a.task-link')}
     }
 }

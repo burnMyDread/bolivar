@@ -29,7 +29,7 @@ class MastersTab extends Page {
         //wait for all the items in the header
         waitFor(60,0.1) { header.bread_crum_trail.present }
         waitFor(10,0.01) { header.jenkins_home.present }
-        waitFor(10,0.01) { header.active_alerts.present }
+        //waitFor(10,0.01) { header.active_alerts.present }
         waitFor(10,0.01) { header.search.present }
         waitFor(10,0.01) { header.search_help.present }
         waitFor(10,0.01) { header.user_profile.present }
