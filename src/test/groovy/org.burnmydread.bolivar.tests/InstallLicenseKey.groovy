@@ -1,0 +1,52 @@
+package org.burnmydread.bolivar.tests
+
+import geb.spock.GebSpec
+import org.burnmydread.bolivar.pageobjects.Login
+import org.burnmydread.bolivar.pageobjects.cjoc.EnterLicense
+import org.burnmydread.bolivar.pageobjects.cjoc.LicenseLandingPage
+import org.burnmydread.bolivar.pageobjects.cjoc.MastersTab
+import org.burnmydread.bolivar.pageobjects.shared.InstallPlugins
+import org.burnmydread.bolivar.pageobjects.utils.EncryptionDomainObject
+import org.burnmydread.bolivar.pageobjects.utils.EncryptionUtil
+
+/**
+ * Created by zach on 7/17/17.
+ */
+class InstallLicenseKey extends GebSpec {
+
+    static final decryptionkey = System.properties.'bolivar.decryptionkey'
+    static final encrypted_key = new File(System.properties.'bolivar.keypath').text
+    static final encrypted_cert = new File(System.properties.'bolivar.keycert').text
+
+    def installLicense() {
+        when:
+            to Login
+        then:
+            at Login
+        when:
+            username_textbox = Login.correct_username
+            password_textbox = Login.correct_password
+            login_button.click()
+        then:
+            at LicenseLandingPage
+        when:
+            enter_license.click()
+        then:
+            at EnterLicense
+        when:
+            def encryptionSettings = new EncryptionDomainObject(algorithm: 'AES', secretKeyText: decryptionkey)
+            println encrypted_key
+            license_key = EncryptionUtil.decrypt(encrypted_key, encryptionSettings)
+            license_cert = EncryptionUtil.decrypt(encrypted_cert, encryptionSettings)
+            accept_terms.click()
+            submit.click()
+        then:
+            at InstallPlugins
+        when:
+            sugested_plugins.click()
+            sleep(5 * 1000)
+            to MastersTab
+        then:
+            at MastersTab
+    }
+}

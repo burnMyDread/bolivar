@@ -12,6 +12,7 @@ import org.burnmydread.bolivar.pageobjects.shared.SideBar
  * Created by zach on 5/18/17.
  */
 class MastersTab extends Page {
+    static url = System.properties.'bolivar.url'
     static at = {
         //Wait for all the items on the left side bar
         waitFor(60,0.25) { side_bar.new_item.present }
@@ -24,7 +25,7 @@ class MastersTab extends Page {
         waitFor(10,0.01) { side_bar.analytics_dashboard.present }
         waitFor(10,0.01) { side_bar.my_views.present }
         waitFor(10,0.01) { side_bar.credentials.present }
-        waitFor(10,0.01) { side_bar.cluster_operations.present }
+        //waitFor(10,0.01) { side_bar.cluster_operations.present }
 
         //wait for all the items in the header
         waitFor(60,0.1) { header.bread_crum_trail.present }

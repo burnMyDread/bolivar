@@ -5,7 +5,7 @@ import geb.Page
 /**
  * Created by zach on 5/18/17.
  */
-class Login extends  Page{
+class Login extends  Page {
     static correct_password = System.properties.'bolivar.password'
     static correct_username = System.properties.'bolivar.username'
 
