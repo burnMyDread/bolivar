@@ -5,7 +5,7 @@ void run_bolivar(String jenkinsUrl, String username, String password) {
         sh "mvn test -Dbolivar.username=$username -Dbolivar.password=$password -Dbolivar.url=$jenkinsUrl -Dtest=InstallLicenseKey"
     }
     stage('install plugins') {
-        sh "mvn test -Dbolivar.username=$username -Dbolivar.password=$password -Dbolivar.url=$jenkinsUrl -Dtest=InstallLicenseKey"
+        sh "mvn test -Dbolivar.username=$username -Dbolivar.password=$password -Dbolivar.url=$jenkinsUrl -Dtest=InstallPlugins"
     }
     stage('create master') {
         sh "mvn test -Dbolivar.username=$username -Dbolivar.password=$password -Dbolivar.url=$jenkinsUrl -Dtest=CreateNewTeamTest"
