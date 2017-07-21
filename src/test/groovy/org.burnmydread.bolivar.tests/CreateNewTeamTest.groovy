@@ -3,7 +3,7 @@ package org.burnmydread.bolivar.tests
 import geb.spock.GebSpec
 import org.burnmydread.bolivar.pageobjects.Login
 import org.burnmydread.bolivar.pageobjects.cjoc.BlueSteelCreateTeam
-import org.burnmydread.bolivar.pageobjects.cjoc.BlueSteelTeams
+import org.burnmydread.bolivar.pageobjects.bluesteel.BlueSteelTeams
 import org.burnmydread.bolivar.pageobjects.cjoc.MastersTab
 
 /**
@@ -34,5 +34,15 @@ class CreateNewTeamTest extends GebSpec {
             team_name_box = team_name
         then:
             create_team_button.click()
+        when:
+            sleep(10000)
+            to MastersTab
+        then:
+            at MastersTab
+        when:
+            side_bar.blue_ocean.click()
+        then:
+            at BlueSteelTeams
+            assert first_team.present
     }
 }
