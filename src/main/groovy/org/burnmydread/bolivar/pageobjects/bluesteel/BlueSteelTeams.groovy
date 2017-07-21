@@ -1,4 +1,4 @@
-package org.burnmydread.bolivar.pageobjects.cjoc
+package org.burnmydread.bolivar.pageobjects.bluesteel
 
 import geb.Page
 
@@ -14,8 +14,8 @@ class BlueSteelTeams extends Page {
 
     static content = {
         cloud_bees_logo { $('#root > div > section > div > div > div.ExtensionPoint.jenkins-header-logo > div > a') }
-        create_team_button { $('#outer > main > article > div > div > div > div.right-container > a') }
+        create_team_button { $('#outer > main > article > div > div > div > div.right-container > div > a') }
         team_search { $('#outer > main > article > div > div > div > div.left-container > div > div > input') }
-
+        first_team { $('#outer > main > article > div > div > div > div.left-container > table > tbody > tr:nth-child(1) > td:nth-child(1) > a') }
     }
 }

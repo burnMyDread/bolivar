@@ -1,4 +1,4 @@
-package org.burnmydread.bolivar.tests
+package org.burnmydread.bolivar.tests.setup
 
 import geb.spock.GebSpec
 import org.burnmydread.bolivar.pageobjects.Login
