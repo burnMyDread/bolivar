@@ -11,6 +11,9 @@
     <artifactId>bolivar</artifactId>
     <name>bolivar test framework</name>
     <version>0.0.1</version>
+    <properties>
+        <webdriver.gecko.driver>"/usr/bin/geckodriver"</webdriver.gecko.driver>
+    </properties>
 
     <dependencies>
         <dependency>
