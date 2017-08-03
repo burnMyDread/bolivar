@@ -35,7 +35,6 @@ class InstallLicenseKey extends GebSpec {
             at EnterLicense
         when:
             def encryptionSettings = new EncryptionDomainObject(algorithm: 'AES', secretKeyText: decryptionkey)
-            println encrypted_key
             license_key = EncryptionUtil.decrypt(encrypted_key, encryptionSettings)
             license_cert = EncryptionUtil.decrypt(encrypted_cert, encryptionSettings)
             accept_terms.click()
