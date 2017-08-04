@@ -1,5 +1,6 @@
 package org.burnmydread.bolivar.tests.setup
 
+import geb.spock.GebReportingSpec
 import geb.spock.GebSpec
 import org.burnmydread.bolivar.pageobjects.Login
 import org.burnmydread.bolivar.pageobjects.cjoc.MastersTab
@@ -12,7 +13,7 @@ import org.burnmydread.bolivar.pageobjects.shared.manageplugins.UpdatePlugins
 /**
  * Created by zach on 7/19/17.
  */
-class InstallPlugins extends GebSpec {
+class InstallPlugins extends GebReportingSpec {
 
     def blueSteelPlugins() {
         when:
