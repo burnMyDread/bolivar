@@ -20,7 +20,7 @@ class UpdatePlugins extends Page {
         waitFor(60,0.1) { back_to_dashboard.present }
         waitFor(10,0.01) { manage_jenkins.present }
         waitFor(10,0.01) { update_center.present }
-        waitFor(10,0.01) { updates_tab.present }
+        //waitFor(10,0.01) { updates_tab.present }
         waitFor(10,0.01) { avalible_tab.present }
         waitFor(10,0.01) { installed_tab.present }
         waitFor(10,0.01) { advanced_tab.present }

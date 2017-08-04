@@ -43,7 +43,7 @@ class AvaliblePlugins extends Page {
         //filter
         filter_label { $('#filter-container') }
         filter { $('#filter-box') }
-
+        
         blue_steel_plugin { $('#plugins > tbody > tr:nth-child(51) > td:nth-child(1) > input[type="checkbox"]')}
 
         install_wo_restart { $('#yui-gen1-button') }
