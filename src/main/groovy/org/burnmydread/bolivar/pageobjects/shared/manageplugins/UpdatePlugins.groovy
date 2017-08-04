@@ -33,10 +33,10 @@ class UpdatePlugins extends Page {
         back_to_dashboard { $('#tasks > div:nth-child(1) > a.task-link') }
         manage_jenkins { $('#tasks > div:nth-child(2) > a.task-link') }
         update_center { $('#tasks > div:nth-child(3) > a.task-link') }
-        updates_tab { $('#main-panel > form > div.tabBarFrame > div.tabBar > div.tab.active > a') }
-        avalible_tab { $('#main-panel > form > div.tabBarFrame > div.tabBar > div:nth-child(2) > a') }
-        installed_tab { $('#main-panel > form > div.tabBarFrame > div.tabBar > div:nth-child(3) > a') }
-        advanced_tab { $('#main-panel > form > div.tabBarFrame > div.tabBar > div:nth-child(4) > a') }
+        updates_tab { $('#main-panel > form > div.tabBarFrame > div.tabBar > div.tab.active ') }
+        avalible_tab { $('#main-panel > form > div.tabBarFrame > div.tabBar > div:nth-child(2)') }
+        installed_tab { $('#main-panel > form > div.tabBarFrame > div.tabBar > div:nth-child(3)') }
+        advanced_tab { $('#main-panel > form > div.tabBarFrame > div.tabBar > div:nth-child(4)') }
         update_information { $('#bottom-sticker > div.bottom-sticker-inner') }
         check_now { $('#bottom-sticker > div.bottom-sticker-inner > a > button') }
         description { $('#main-panel > form > div:nth-child(5)') }
