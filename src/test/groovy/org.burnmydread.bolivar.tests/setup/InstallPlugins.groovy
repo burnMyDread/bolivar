@@ -56,10 +56,6 @@ class InstallPlugins extends GebReportingSpec {
             password_textbox = Login.correct_password
             login_button.click()
         then:
-            at BuildAnalytics
-        when:
-            tabs.masters.click()
-        then:
             at MastersTab
             assert blue_ocean.present
     }
