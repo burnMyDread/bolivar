@@ -3,6 +3,7 @@ package org.burnmydread.bolivar.tests.setup
 import geb.spock.GebReportingSpec
 import geb.spock.GebSpec
 import org.burnmydread.bolivar.pageobjects.Login
+import org.burnmydread.bolivar.pageobjects.cjoc.BuildAnalytics
 import org.burnmydread.bolivar.pageobjects.cjoc.MastersTab
 import org.burnmydread.bolivar.pageobjects.shared.ManageJenkins
 import org.burnmydread.bolivar.pageobjects.shared.manageplugins.AdvancedPlugins
@@ -39,6 +40,7 @@ class InstallPlugins extends GebReportingSpec {
         then:
             at AvaliblePlugins
         when:
+            filter = 'Experience'
             blue_steel_plugin.click()
             install_w_restart.click()
         then:
@@ -54,7 +56,11 @@ class InstallPlugins extends GebReportingSpec {
             password_textbox = Login.correct_password
             login_button.click()
         then:
+            at BuildAnalytics
+        when:
+            tabs.masters.click()
+        then:
             at MastersTab
-            assert side_bar.blue_ocean.present
+            assert blue_ocean.present
     }
 }

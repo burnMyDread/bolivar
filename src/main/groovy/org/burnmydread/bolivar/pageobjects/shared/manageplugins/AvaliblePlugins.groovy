@@ -19,7 +19,7 @@ class AvaliblePlugins extends Page {
 
         waitFor(60,0.1) { back_to_dashboard.present }
         waitFor(10,0.01) { manage_jenkins.present }
-        waitFor(10,0.01) { update_center.present }
+        //waitFor(10,0.01) { update_center.present }
         waitFor(10,0.01) { updates_tab.present }
         waitFor(10,0.01) { avalible_tab.present }
         waitFor(10,0.01) { installed_tab.present }
@@ -43,11 +43,12 @@ class AvaliblePlugins extends Page {
         //filter
         filter_label { $('#filter-container') }
         filter { $('#filter-box') }
-        
-        blue_steel_plugin { $('#plugins > tbody > tr:nth-child(51) > td:nth-child(1) > input[type="checkbox"]')}
+
+        blue_steel_plugin { $('#plugins > tbody > tr:nth-child(50) > td:nth-child(1) > input[type="checkbox"]')}
 
         install_wo_restart { $('#yui-gen1-button') }
-        install_w_restart { $('#yui-gen2-button') }
+
+        install_w_restart { $('#yui-gen5-button') }
         check_now { $('#bottom-sticker > div.bottom-sticker-inner > a > button') }
     }
 }

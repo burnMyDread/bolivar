@@ -4,6 +4,7 @@ import geb.spock.GebSpec
 import org.burnmydread.bolivar.pageobjects.Login
 import org.burnmydread.bolivar.pageobjects.cjoc.BlueSteelCreateTeam
 import org.burnmydread.bolivar.pageobjects.bluesteel.BlueSteelTeams
+import org.burnmydread.bolivar.pageobjects.cjoc.BuildAnalytics
 import org.burnmydread.bolivar.pageobjects.cjoc.MastersTab
 
 /**
@@ -22,6 +23,10 @@ class CreateNewTeamTest extends GebSpec {
             username_textbox = Login.correct_username
             password_textbox = Login.correct_password
             login_button.click()
+        then:
+            at BuildAnalytics
+        when:
+            tabs.masters.click()
         then:
             at MastersTab
         when:
