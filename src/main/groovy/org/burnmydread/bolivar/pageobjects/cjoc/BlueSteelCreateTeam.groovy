@@ -13,7 +13,7 @@ class BlueSteelCreateTeam extends Page {
     }
 
     static content = {
-        cloud_bees_logo { $('.MasterLogo') }
+       // cloud_bees_logo { $('.MasterLogo') }
         team_name_box { $('.TextInput-control') }
         team_name_button { $('button.active') }
         create_team_button { $('.submit')}
