@@ -7,16 +7,18 @@ import geb.Page
  */
 class BlueSteelCreateTeam extends Page {
     static at = {
-        //waitFor(60, 0.25){ cloud_bees_logo.present }
-        waitFor(60, 0.1){ directions.present }
+        waitFor(60, 0.25){ cloud_bees_logo.present }
         waitFor(10, 0.01){ team_name_box.present }
-        waitFor(10, 0.01){ create_team_button.present }
+        waitFor(10, 0.01){ team_name_button.present }
     }
 
     static content = {
-        cloud_bees_logo { $('#root > div > section > div > div > div.ExtensionPoint.jenkins-header-logo > div > a') }
-        directions { $('#outer > div > main > article > div > div.vertical-step-component.active.first-step > div.step-content > h1') }
-        team_name_box { $('#outer > div > main > article > div > div.vertical-step-component.active.first-step > div.step-content > div > div > div > input') }
-        create_team_button { $('#outer > div > main > article > div > div.vertical-step-component.active.first-step > div.step-content > div > div > button')}
+        cloud_bees_logo { $('.MasterLogo') }
+        team_name_box { $('.TextInput-control') }
+        team_name_button { $('button.active') }
+        create_team_button { $('.submit')}
+        ancor_team_icon { $('.anchor') }
+        icon_select { $('.submit') }
+
     }
 }

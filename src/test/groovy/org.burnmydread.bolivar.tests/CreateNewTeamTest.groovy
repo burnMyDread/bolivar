@@ -38,9 +38,14 @@ class CreateNewTeamTest extends GebSpec {
             at BlueSteelCreateTeam
             team_name_box = team_name
         then:
+            team_name_button.click()
+        when:
+            ancor_team_icon.click()
+        then:
+            icon_select.click()
             create_team_button.click()
         when:
-            sleep(10000)
+            sleep(20000)
             to MastersTab
         then:
             at MastersTab
