@@ -47,7 +47,7 @@ class InstallPlugins extends GebReportingSpec {
             at RestartWithUpdates
         when:
             restart_button.click()
-            sleep( 15000)
+            sleep( 60000)
             to Login
         then:
             at Login
@@ -55,6 +55,10 @@ class InstallPlugins extends GebReportingSpec {
             username_textbox = Login.correct_username
             password_textbox = Login.correct_password
             login_button.click()
+        then:
+            at BuildAnalytics
+        when:
+            tabs.masters.click()
         then:
             at MastersTab
             assert blue_ocean.present
