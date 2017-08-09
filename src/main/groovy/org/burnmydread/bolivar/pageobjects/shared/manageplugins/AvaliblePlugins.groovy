@@ -47,8 +47,7 @@ class AvaliblePlugins extends Page {
         blue_steel_plugin { $('#plugins > tbody > tr:nth-child(50) > td:nth-child(1) > input[type="checkbox"]')}
 
         install_wo_restart { $('#yui-gen1-button') }
-
-        install_w_restart { $('#yui-gen5-button') }
+        install_w_restart { $('#yui-gen2-button') }
         check_now { $('#bottom-sticker > div.bottom-sticker-inner > a > button') }
     }
 }
