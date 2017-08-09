@@ -11,7 +11,7 @@ class DefaultTabs extends Module {
         all { $('#main-panel > div.tabBarFrame > div.tabBar > div:nth-child(1) > a')}
         build_analytics { $('#main-panel > div.tabBarFrame > div.tabBar > div:nth-child(2) > a')}
         logs { $('#main-panel > div.tabBarFrame > div.tabBar > div:nth-child(3) > a')}
-        masters { $('#main-panel > div.tabBarFrame > div.tabBar > div.tab.active > a')}
+        masters { $('#kibana-dashboard > div.tabBarFrame > div.tabBar > div:nth-child(4) > a')}
         performance_analytics { $('#main-panel > div.tabBarFrame > div.tabBar > div:nth-child(5) > a')}
     }
 
