@@ -7,10 +7,10 @@ import geb.Page
  */
 class BlueSteelCreateTeam extends Page {
     static at = {
-        waitFor(60, 0.25){ cloud_bees_logo.present }
-        waitFor(10, 0.1){ directions.present }
-        waitFor(10, 0.1){ team_name_box.present }
-        waitFor(10, 0.1){ create_team_button.present }
+        //waitFor(60, 0.25){ cloud_bees_logo.present }
+        waitFor(60, 0.1){ directions.present }
+        waitFor(10, 0.01){ team_name_box.present }
+        waitFor(10, 0.01){ create_team_button.present }
     }
 
     static content = {
