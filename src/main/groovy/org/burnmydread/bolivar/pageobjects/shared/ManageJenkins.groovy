@@ -32,27 +32,29 @@ class ManageJenkins extends Page {
 
     }
     static content = {
+
         configure_system       { $('#management-links > tbody > tr:nth-child(1) > td:nth-child(2) > div.link > a')  }
         configure_security     { $('#management-links > tbody > tr:nth-child(2) > td:nth-child(2) > div.link > a')  }
-        configure_credentials  { $('#management-links > tbody > tr:nth-child(3) > td:nth-child(2) > div.link > a')  }
-        configure_analytics    { $('#management-links > tbody > tr:nth-child(4) > td:nth-child(2) > div.link > a')  }
-        global_tools           { $('#management-links > tbody > tr:nth-child(5) > td:nth-child(2) > div.link > a')  }
-        reload_configuration   { $('#management-links > tbody > tr:nth-child(6) > td:nth-child(2) > div.link > a')  }
-        manage_plugins         { $('#management-links > tbody > tr:nth-child(7) > td:nth-child(2) > div.link > a')  }
-        system_information     { $('#management-links > tbody > tr:nth-child(8) > td:nth-child(2) > div.link > a')  }
-        system_log             { $('#management-links > tbody > tr:nth-child(9) > td:nth-child(2) > div.link > a')  }
-        load_statistics        { $('#management-links > tbody > tr:nth-child(10) > td:nth-child(2) > div.link > a') }
-        jenkins_cli            { $('#management-links > tbody > tr:nth-child(11) > td:nth-child(2) > div.link > a') }
-        script_console         { $('#management-links > tbody > tr:nth-child(12) > td:nth-child(2) > div.link > a') }
-        manage_nodes           { $('#management-links > tbody > tr:nth-child(13) > td:nth-child(2) > div.link > a') }
-        castle_configuration   { $('#management-links > tbody > tr:nth-child(14) > td:nth-child(2) > div.link > a') }
-        move_copy_promote      { $('#management-links > tbody > tr:nth-child(15) > td:nth-child(2) > div.link > a') }
-        cluster_operations     { $('#management-links > tbody > tr:nth-child(16) > td:nth-child(2) > div.link > a') }
-        about_jenkins          { $('#management-links > tbody > tr:nth-child(17) > td:nth-child(2) > div.link > a') }
-        manage_old_data        { $('#management-links > tbody > tr:nth-child(18) > td:nth-child(2) > div.link > a') }
-        manage_license         { $('#management-links > tbody > tr:nth-child(19) > td:nth-child(2) > div.link > a') }
-        manage_users           { $('#management-links > tbody > tr:nth-child(20) > td:nth-child(2) > div.link > a') }
-        script_approval        { $('#management-links > tbody > tr:nth-child(21) > td:nth-child(2) > div.link > a') }
-        prepare_for_shutdown   { $('#management-links > tbody > tr:nth-child(22) > td:nth-child(2) > div.link > a') }
+        beekeeper              {  $('#management-links > tbody > tr:nth-child(3) > td:nth-child(2) > div.link > a')}
+        configure_credentials  { $('#management-links > tbody > tr:nth-child(4) > td:nth-child(2) > div.link > a')  }
+        configure_analytics    { $('#management-links > tbody > tr:nth-child(5) > td:nth-child(2) > div.link > a')  }
+        global_tools           { $('#management-links > tbody > tr:nth-child(6) > td:nth-child(2) > div.link > a')  }
+        reload_configuration   { $('#management-links > tbody > tr:nth-child(7) > td:nth-child(2) > div.link > a')  }
+        manage_plugins         { $('#management-links > tbody > tr:nth-child(8) > td:nth-child(2) > div.link > a')  }
+        system_information     { $('#management-links > tbody > tr:nth-child(9) > td:nth-child(2) > div.link > a')  }
+        system_log             { $('#management-links > tbody > tr:nth-child(10) > td:nth-child(2) > div.link > a')  }
+        load_statistics        { $('#management-links > tbody > tr:nth-child(11) > td:nth-child(2) > div.link > a') }
+        jenkins_cli            { $('#management-links > tbody > tr:nth-child(12) > td:nth-child(2) > div.link > a') }
+        script_console         { $('#management-links > tbody > tr:nth-child(13) > td:nth-child(2) > div.link > a') }
+        manage_nodes           { $('#management-links > tbody > tr:nth-child(14) > td:nth-child(2) > div.link > a') }
+        castle_configuration   { $('#management-links > tbody > tr:nth-child(15) > td:nth-child(2) > div.link > a') }
+        move_copy_promote      { $('#management-links > tbody > tr:nth-child(16) > td:nth-child(2) > div.link > a') }
+        cluster_operations     { $('#management-links > tbody > tr:nth-child(17) > td:nth-child(2) > div.link > a') }
+        about_jenkins          { $('#management-links > tbody > tr:nth-child(18) > td:nth-child(2) > div.link > a') }
+        manage_old_data        { $('#management-links > tbody > tr:nth-child(19) > td:nth-child(2) > div.link > a') }
+        manage_license         { $('#management-links > tbody > tr:nth-child(20) > td:nth-child(2) > div.link > a') }
+        manage_users           { $('#management-links > tbody > tr:nth-child(21) > td:nth-child(2) > div.link > a') }
+        script_approval        { $('#management-links > tbody > tr:nth-child(22) > td:nth-child(2) > div.link > a') }
+        prepare_for_shutdown   { $('#management-links > tbody > tr:nth-child(23) > td:nth-child(2) > div.link > a') }
     }
 }

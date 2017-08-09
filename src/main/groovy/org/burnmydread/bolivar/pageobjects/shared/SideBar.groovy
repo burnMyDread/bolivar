@@ -11,6 +11,7 @@ class SideBar extends Module{
         people { $("#tasks > div:nth-child(2) > a.task-link")}
         build_history { $('#tasks > div:nth-child(3) > a.task-link')}
         edit_view { $('#tasks > div:nth-child(4) > a.task-link')}
+        
         manage_jenkins { $('#tasks > div:nth-child(5) > a.task-link')}
         alets { $('#tasks > div:nth-child(6) > a.task-link')}
         support { $('#tasks > div:nth-child(7) > a.task-link')}
