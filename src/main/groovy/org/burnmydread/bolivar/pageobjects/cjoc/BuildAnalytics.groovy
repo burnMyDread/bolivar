@@ -26,7 +26,7 @@ class BuildAnalytics extends Page {
         waitFor(10,0.01) { side_menu_build_queue.present }
         waitFor(10,0.01) { side_menu_node_performance.present }
         waitFor(10,0.01) { side_menu_total_project.present }
-        waitFor(10,0.01) { graph_title.present }
+        //waitFor(10,0.01) { graph_title.present }
 
     }
     static content = {
