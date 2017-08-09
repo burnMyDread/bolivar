@@ -61,6 +61,6 @@ class InstallPlugins extends GebReportingSpec {
             tabs.masters.click()
         then:
             at MastersTab
-            assert blue_ocean.present
+            assert side_bar.blue_ocean.present
     }
 }
