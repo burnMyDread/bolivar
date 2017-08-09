@@ -47,7 +47,7 @@ class InstallPlugins extends GebReportingSpec {
             at RestartWithUpdates
         when:
             restart_button.click()
-            sleep( 5000)
+            sleep( 15000)
             to Login
         then:
             at Login
