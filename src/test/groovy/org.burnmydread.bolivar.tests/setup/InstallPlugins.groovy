@@ -41,12 +41,14 @@ class InstallPlugins extends GebReportingSpec {
             at AvaliblePlugins
         when:
             filter = 'Experience'
+            report 'plugins avalible'
             blue_steel_plugin.click()
             install_w_restart.click()
         then:
             at RestartWithUpdates
         when:
             restart_button.click()
+            report 'after restart'
             sleep( 60000)
             to Login
         then:
@@ -56,11 +58,13 @@ class InstallPlugins extends GebReportingSpec {
             password_textbox = Login.correct_password
             login_button.click()
         then:
+            report 'post login'
             at BuildAnalytics
         when:
             tabs.masters.click()
         then:
             at MastersTab
+            report 'masters tab'
             assert side_bar.blue_ocean.present
     }
 }

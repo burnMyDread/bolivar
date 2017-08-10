@@ -33,6 +33,7 @@ class CreateNewTeamTest extends GebReportingSpec {
         when:
             side_bar.blue_ocean.click()
         then:
+            report 'blue steel?'
             at BlueSteelTeams
             create_team_button.click()
         when:
