@@ -31,6 +31,7 @@ class CreateNewTeamTest extends GebReportingSpec {
         then:
             at MastersTab
         when:
+            report 'masters tab'
             side_bar.blue_ocean.click()
         then:
             report 'blue steel?'
