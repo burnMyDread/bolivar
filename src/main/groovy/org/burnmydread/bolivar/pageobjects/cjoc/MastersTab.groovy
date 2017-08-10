@@ -20,7 +20,7 @@ class MastersTab extends Page {
         waitFor(10,0.01) { side_bar.build_history.present }
         waitFor(10,0.01) { side_bar.edit_view.present }
         waitFor(10,0.01) { side_bar.manage_jenkins.present }
-        waitFor(10,0.01) { side_bar.alets.present }
+        waitFor(10,0.01) { side_bar.alerts.present }
         waitFor(10,0.01) { side_bar.support.present }
         waitFor(10,0.01) { side_bar.analytics_dashboard.present }
         waitFor(10,0.01) { side_bar.my_views.present }
