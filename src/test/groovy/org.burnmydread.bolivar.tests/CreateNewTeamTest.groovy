@@ -1,5 +1,6 @@
 package org.burnmydread.bolivar.tests
 
+import geb.spock.GebReportingSpec
 import geb.spock.GebSpec
 import org.burnmydread.bolivar.pageobjects.Login
 import org.burnmydread.bolivar.pageobjects.cjoc.BlueSteelCreateTeam
@@ -10,7 +11,7 @@ import org.burnmydread.bolivar.pageobjects.cjoc.MastersTab
 /**
  * Created by zach on 6/15/17.
  */
-class CreateNewTeamTest extends GebSpec {
+class CreateNewTeamTest extends GebReportingSpec {
 
     static team_name = System.properties.'bolivar.team_name' ?: 'bolivia'
 
