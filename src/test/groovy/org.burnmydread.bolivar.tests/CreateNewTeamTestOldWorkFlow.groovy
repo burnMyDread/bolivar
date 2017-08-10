@@ -44,7 +44,7 @@ class CreateNewTeamTestOldWorkFlow extends GebReportingSpec {
             team_name_button.click()
         when:
             sleep(20000)
-            to MastersTab
+            to BuildAnalytics
         then:
             at BuildAnalytics
         when:

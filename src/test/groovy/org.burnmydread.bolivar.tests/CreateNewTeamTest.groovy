@@ -50,7 +50,7 @@ class CreateNewTeamTest extends GebReportingSpec {
             create_team_button.click()
         when:
             sleep(20000)
-            to MastersTab
+            to BuildAnalytics
         then:
             at BuildAnalytics
         when:

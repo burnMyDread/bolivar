@@ -8,6 +8,7 @@ import org.burnmydread.bolivar.pageobjects.shared.Header
  * Created by zach on 8/9/17.
  */
 class BuildAnalytics extends Page {
+    static url = System.properties.'bolivar.url'
     static at = {
         //wait for all the items in the header
         waitFor(60,0.1) { header.bread_crum_trail.present }
