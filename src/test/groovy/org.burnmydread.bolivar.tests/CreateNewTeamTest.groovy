@@ -52,6 +52,10 @@ class CreateNewTeamTest extends GebReportingSpec {
             sleep(20000)
             to MastersTab
         then:
+            at BuildAnalytics
+        when:
+            tabs.masters.click()
+        then:
             at MastersTab
         when:
             side_bar.blue_ocean.click()
