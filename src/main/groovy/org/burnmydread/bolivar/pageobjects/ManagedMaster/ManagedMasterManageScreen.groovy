@@ -14,7 +14,7 @@ class ManagedMasterManageScreen extends Page {
         waitFor(10,0.01) { side_bar.manage.present }
         waitFor(120,1) { side_bar.disconnect.present }
         waitFor(10,0.01) { side_bar.stop.present }
-        waitFor(10,0.01) { side_bar.start.present }
+        //waitFor(10,0.01) { side_bar.start.present }
         waitFor(10,0.01) { side_bar.mcp.present }
         waitFor(10,0.01) { side_bar.cluster_operations.present }
         waitFor(10,0.01) { side_bar.blue_ocean.present }
