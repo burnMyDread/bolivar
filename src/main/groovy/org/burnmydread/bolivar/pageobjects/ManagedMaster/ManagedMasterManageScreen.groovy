@@ -12,7 +12,7 @@ class ManagedMasterManageScreen extends Page {
         //Wait for all the items on the left side bar
         waitFor(60,0.25) { side_bar.view.present }
         waitFor(10,0.01) { side_bar.manage.present }
-        waitFor(10,0.01) { side_bar.disconnect.present }
+        waitFor(120,1) { side_bar.disconnect.present }
         waitFor(10,0.01) { side_bar.stop.present }
         waitFor(10,0.01) { side_bar.start.present }
         waitFor(10,0.01) { side_bar.mcp.present }
