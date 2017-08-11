@@ -3,6 +3,7 @@ package org.burnmydread.bolivar.tests
 import geb.spock.GebReportingSpec
 import geb.spock.GebSpec
 import org.burnmydread.bolivar.pageobjects.Login
+import org.burnmydread.bolivar.pageobjects.ManagedMaster.ManagedMasterManageScreen
 import org.burnmydread.bolivar.pageobjects.cjoc.BlueSteelCreateTeam
 import org.burnmydread.bolivar.pageobjects.bluesteel.BlueSteelTeams
 import org.burnmydread.bolivar.pageobjects.cjoc.BuildAnalytics
@@ -45,14 +46,15 @@ class CreateNewTeamTest extends GebReportingSpec {
             icon_select.click()
             create_team_button.click()
         when:
-            sleep(20000)
+            sleep(10000)
             to MastersTab
         then:
             at MastersTab
         when:
-            side_bar.blue_ocean.click()
+            waitFor (120, 1) { created_team.team.present }
+            created_team.manage.click()
         then:
-            at BlueSteelTeams
-            assert first_team.present
+            at ManagedMasterManageScreen
+
     }
 }

@@ -2,6 +2,7 @@ package org.burnmydread.bolivar.pageobjects.cjoc
 
 import geb.Page
 import org.burnmydread.bolivar.pageobjects.DefaultTabs
+import org.burnmydread.bolivar.pageobjects.bluesteel.Team
 import org.burnmydread.bolivar.pageobjects.shared.BuildExecutors
 import org.burnmydread.bolivar.pageobjects.shared.BuildQueue
 import org.burnmydread.bolivar.pageobjects.shared.CurentBuildsInQueue
@@ -13,6 +14,7 @@ import org.burnmydread.bolivar.pageobjects.shared.SideBar
  */
 class MastersTab extends Page {
     static url = System.properties.'bolivar.url'
+    static team_name = System.properties.'bolivar.team_name' ?: 'bolivia'
     static at = {
         //Wait for all the items on the left side bar
         waitFor(60,0.25) { side_bar.new_item.present }
@@ -62,5 +64,6 @@ class MastersTab extends Page {
         //This button is behaving a bit oddly giving me different IDs when I run the test.
         //This seems to work and is stable.
         create_new_master_button { $('.settings-no-help') }
+        created_team { module(new Team(name:"$team_name"))}
     }
 }

@@ -23,5 +23,11 @@ class SideBar extends Module{
         blue_ocean { $("#tasks").$(By.linkText('Open Blue Ocean'))   }
         credentials { $("#tasks").$(By.linkText('Credentials')) }
         cluster_operations { $("#tasks").$(By.linkText('Cluster Operations')) }
+        manage { $("#tasks").$(By.linkText('Manage')) }
+        disconnect { $("#tasks").$(By.linkText('Disconnect')) }
+        stop { $("#tasks").$(By.linkText('Stop')) }
+        start { $("#tasks").$(By.linkText('Start')) }
+        mcp { $("#tasks").$(By.linkText('Move/Copy/Promote')) }
+        view { $("#tasks").$(By.linkText('View')) }
     }
 }
