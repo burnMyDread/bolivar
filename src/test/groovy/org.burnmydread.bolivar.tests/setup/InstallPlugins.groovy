@@ -49,7 +49,7 @@ class InstallPlugins extends GebReportingSpec {
         when:
             restart_button.click()
             report 'after restart'
-            sleep( 60000)
+            sleep( 30000)
             to Login
         then:
             at Login
@@ -59,10 +59,6 @@ class InstallPlugins extends GebReportingSpec {
             login_button.click()
         then:
             report 'post login'
-            at BuildAnalytics
-        when:
-            tabs.masters.click()
-        then:
             at MastersTab
             report 'masters tab'
             assert side_bar.blue_ocean.present

@@ -55,6 +55,6 @@ class CreateNewTeamTestOldWorkFlow extends GebReportingSpec {
             side_bar.blue_ocean.click()
         then:
             at BlueSteelTeams
-            
+
     }
 }

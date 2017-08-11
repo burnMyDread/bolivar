@@ -25,10 +25,6 @@ class CreateNewTeamTest extends GebReportingSpec {
             password_textbox = Login.correct_password
             login_button.click()
         then:
-            at BuildAnalytics
-        when:
-            tabs.masters.click()
-        then:
             at MastersTab
         when:
             report 'masters tab'
@@ -50,11 +46,7 @@ class CreateNewTeamTest extends GebReportingSpec {
             create_team_button.click()
         when:
             sleep(20000)
-            to BuildAnalytics
-        then:
-            at BuildAnalytics
-        when:
-            tabs.masters.click()
+            to MastersTab
         then:
             at MastersTab
         when:

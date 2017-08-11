@@ -2,6 +2,7 @@ package org.burnmydread.bolivar.pageobjects.shared.manageplugins
 
 import geb.Page
 import org.burnmydread.bolivar.pageobjects.shared.Header
+import org.openqa.selenium.By
 
 /**
  * Created by zach on 7/19/17.
@@ -44,7 +45,7 @@ class AvaliblePlugins extends Page {
         filter_label { $('#filter-container') }
         filter { $('#filter-box') }
 
-        blue_steel_plugin { $('#plugins > tbody > tr:nth-child(50) > td:nth-child(1) > input[type="checkbox"]')}
+        blue_steel_plugin { $('#plugins').$(By.name('plugin.bluesteel-cjoc.cje-oc-offline'))}
 
         install_wo_restart { $('#yui-gen1-button') }
         install_w_restart { $('#yui-gen2-button') }
