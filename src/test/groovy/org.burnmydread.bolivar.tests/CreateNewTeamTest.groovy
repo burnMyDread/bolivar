@@ -4,6 +4,9 @@ import geb.spock.GebReportingSpec
 import geb.spock.GebSpec
 import org.burnmydread.bolivar.pageobjects.Login
 import org.burnmydread.bolivar.pageobjects.ManagedMaster.ManagedMasterManageScreen
+import org.burnmydread.bolivar.pageobjects.bluesteel.BlueSteelTeamPipelines
+import org.burnmydread.bolivar.pageobjects.bluesteel.PipelineCreationWizard
+import org.burnmydread.bolivar.pageobjects.bluesteel.Team
 import org.burnmydread.bolivar.pageobjects.cjoc.BlueSteelCreateTeam
 import org.burnmydread.bolivar.pageobjects.bluesteel.BlueSteelTeams
 import org.burnmydread.bolivar.pageobjects.cjoc.BuildAnalytics
@@ -55,6 +58,33 @@ class CreateNewTeamTest extends GebReportingSpec {
             created_team.manage.click()
         then:
             at ManagedMasterManageScreen
-
+            assert disk_size.trim() == 2
+            assert cpu_shares.trim() == 0.2
+            assert memory_size.trim() == 2048
+            assert mm_version.trim() == 'cloudbees/cje-mm:2.60.3.1'
+        when:
+            mm_main_page.click()
+        then:
+            at MastersTab
+            waitFor(10, 0.01) { side_bar.blue_ocean.present }
+        when:
+            side_bar.blue_ocean.click()
+        then:
+            at BlueSteelTeamPipelines
+        when:
+            new_pipeline.click()
+        then:
+            at PipelineCreationWizard
+        when:
+            git.click()
+        then:
+            waitFor(30,0.2) { git_directions.present }
+            waitFor(10,0.01) { git_repo_url.present }
+            waitFor(10,0.01) { git_credintials.present }
+            waitFor(10,0.01) { git_credintials_add.present }
+            waitFor(10,0.01) { git_create_pipeline.present }
+        when:
+            git_repo_url = 'https://github.com/burnMyDread/bolivar.git'
+            get_create_pipeline.click()
     }
 }

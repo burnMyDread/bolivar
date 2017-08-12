@@ -31,11 +31,19 @@ class ManagedMasterManageScreen extends Page {
         //The page spesific content
         waitFor(60,0.1) { status_block.present }
         waitFor(60,0.1) { health_block.present }
+        waitFor(60,0.1) { mm_main_page.present }
+
     }
     static content = {
         side_bar { module SideBar }
         header { module Header }
         status_block { $('#ajax-status') }
+        disk_size { $('#ajax-status > dl > dd:nth-child(2)') }
+        cpu_shares { $('#ajax-status > dl > dd:nth-child(4)') }
+        memory_size { $('#ajax-status > dl > dd:nth-child(6)') }
+        memory_ratio { $('#ajax-status > dl > dd:nth-child(6)') }
+        mm_version { $('#ajax-status > dl > dd:nth-child(10)') }
         health_block { $('#main-panel > div:nth-child(7) > h2') }
+        mm_main_page { $('#ajax-title > a:nth-child(2)')}
     }
 }
