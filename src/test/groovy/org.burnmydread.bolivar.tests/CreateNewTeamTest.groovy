@@ -86,7 +86,7 @@ class CreateNewTeamTest extends GebReportingSpec {
             waitFor(10,0.01) { git_create_pipeline.present }
         when:
             git_repo_url = 'https://github.com/burnMyDread/bolivar.git'
-            get_create_pipeline.click()
+            git_create_pipeline.click()
         then:
             assert true
     }
