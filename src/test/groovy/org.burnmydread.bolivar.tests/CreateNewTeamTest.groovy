@@ -58,10 +58,10 @@ class CreateNewTeamTest extends GebReportingSpec {
             created_team.manage.click()
         then:
             at ManagedMasterManageScreen
-            assert disk_size.trim() == 2
-            assert cpu_shares.trim() == 0.2
-            assert memory_size.trim() == 2048
-            assert mm_version.trim() == 'cloudbees/cje-mm:2.60.3.1'
+            assert disk_size.text().trim() == 2
+            assert cpu_shares.text().trim() == 0.2
+            assert memory_size.text().trim() == 2048
+            assert mm_version.text().trim() == 'cloudbees/cje-mm:2.60.3.1'
         when:
             mm_main_page.click()
         then:
