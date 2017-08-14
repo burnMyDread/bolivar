@@ -17,5 +17,6 @@ class ProjectPipelines extends Page {
         branches { $("#outer > section > div > nav > a.branches") }
         prs { $("#outer > section > div > nav > a.pr")}
         passed_indicator_job_one { $("#${repo_name}-1 > td:nth-child(1) > a > div > svg > g > g > circle") }
+        completed_status_job_one { $("#${repo_name}-1 > td:nth-child(7) > a > time")}
     }
 }

@@ -90,6 +90,6 @@ class CreateNewTeamTest extends GebReportingSpec {
             git_create_pipeline.click()
         then:
             at ProjectPipelines
-            waitFor(120, 1) { passed_indicator_job_one.present }
+            waitFor(120, 1) { completed_status_job_one.text().trim() != '-' }
     }
 }
