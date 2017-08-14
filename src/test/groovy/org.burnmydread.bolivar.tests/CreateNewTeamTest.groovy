@@ -6,6 +6,7 @@ import org.burnmydread.bolivar.pageobjects.Login
 import org.burnmydread.bolivar.pageobjects.ManagedMaster.ManagedMasterManageScreen
 import org.burnmydread.bolivar.pageobjects.bluesteel.BlueSteelTeamPipelines
 import org.burnmydread.bolivar.pageobjects.bluesteel.PipelineCreationWizard
+import org.burnmydread.bolivar.pageobjects.bluesteel.ProjectPipelines
 import org.burnmydread.bolivar.pageobjects.bluesteel.Team
 import org.burnmydread.bolivar.pageobjects.bluesteel.TeamMainTab
 import org.burnmydread.bolivar.pageobjects.cjoc.BlueSteelCreateTeam
@@ -88,6 +89,7 @@ class CreateNewTeamTest extends GebReportingSpec {
             git_repo_url = 'https://github.com/burnMyDread/bolivar.git'
             git_create_pipeline.click()
         then:
-            assert true
+            at ProjectPipelines
+            waitFor(120, 1) { passed_indicator_job_one.present }
     }
 }
