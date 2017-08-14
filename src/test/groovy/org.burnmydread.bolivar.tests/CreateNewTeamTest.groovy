@@ -7,6 +7,7 @@ import org.burnmydread.bolivar.pageobjects.ManagedMaster.ManagedMasterManageScre
 import org.burnmydread.bolivar.pageobjects.bluesteel.BlueSteelTeamPipelines
 import org.burnmydread.bolivar.pageobjects.bluesteel.PipelineCreationWizard
 import org.burnmydread.bolivar.pageobjects.bluesteel.Team
+import org.burnmydread.bolivar.pageobjects.bluesteel.TeamMainTab
 import org.burnmydread.bolivar.pageobjects.cjoc.BlueSteelCreateTeam
 import org.burnmydread.bolivar.pageobjects.bluesteel.BlueSteelTeams
 import org.burnmydread.bolivar.pageobjects.cjoc.BuildAnalytics
@@ -65,7 +66,7 @@ class CreateNewTeamTest extends GebReportingSpec {
         when:
             mm_main_page.click()
         then:
-            at MastersTab
+            at TeamMainTab
             waitFor(10, 0.01) { side_bar.blue_ocean.present }
         when:
             side_bar.blue_ocean.click()
