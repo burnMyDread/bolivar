@@ -1,5 +1,6 @@
 package org.burnmydread.bolivar.tests.setup
 
+import geb.spock.GebReportingSpec
 import geb.spock.GebSpec
 import org.burnmydread.bolivar.pageobjects.Login
 import org.burnmydread.bolivar.pageobjects.cjoc.EnterLicense
@@ -12,7 +13,7 @@ import org.burnmydread.bolivar.pageobjects.utils.EncryptionUtil
 /**
  * Created by zach on 7/17/17.
  */
-class InstallLicenseKey extends GebSpec {
+class InstallLicenseKey extends GebReportingSpec {
 
     static final decryptionkey = System.properties.'bolivar.decryptionkey'
     static final encrypted_key = new File(System.properties.'bolivar.keypath').text
@@ -44,6 +45,7 @@ class InstallLicenseKey extends GebSpec {
         when:
             sugested_plugins.click()
             sleep(5 * 1000)
+
             to MastersTab
         then:
             at MastersTab
