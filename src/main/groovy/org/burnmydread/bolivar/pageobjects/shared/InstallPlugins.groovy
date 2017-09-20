@@ -19,6 +19,6 @@ class InstallPlugins extends Page {
         directions { $('#main-panel > div > div > div > div > div > div.modal-body > div') }
         sugested_plugins  { $('#main-panel > div > div > div > div > div > div.modal-body > div > p.button-set > a.btn.btn-primary.btn-lg.btn-huge.install-recommended > sub') }
         manual_install_plugins  { $('#main-panel > div > div > div > div > div > div.modal-body > div > p.button-set > a.btn.btn-default.btn-lg.btn-huge.install-custom') }
-
+        continue_button { $('#main-panel > div > div > div > div > div > div.modal-body > div > button') }
     }
 }
