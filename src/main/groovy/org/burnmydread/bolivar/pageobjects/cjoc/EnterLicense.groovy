@@ -30,5 +30,6 @@ class EnterLicense extends Page {
         accept_terms { $('#main-panel > div > div > div > div > div > div.modal-body > div > form > div > div:nth-child(2) > div.form-group.checkbox > label > input') }
         submit { $('#main-panel > div > div > div > div > div > div.modal-footer.cb-registration-form > button.btn.btn-primary.pull-right') }
         back { $('#main-panel > div > div > div > div > div > div.modal-footer.cb-registration-form > button.btn.btn-link.install-home') }
+        continue_button { $('#main-panel > div > div > div > div > div > div.modal-body > div > button') }
     }
 }

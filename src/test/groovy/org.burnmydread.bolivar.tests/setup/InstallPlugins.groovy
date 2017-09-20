@@ -49,10 +49,8 @@ class InstallPlugins extends GebReportingSpec {
         when:
             restart_button.click()
             report 'after restart'
-        then:
-            waitFor(360,0.5) {continue_button.present }
-        when:
-            continue_button.click()
+            sleep( 30000)
+            to Login
         then:
             at Login
         when:
