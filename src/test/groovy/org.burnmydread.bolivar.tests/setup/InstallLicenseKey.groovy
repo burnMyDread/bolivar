@@ -43,10 +43,8 @@ class InstallLicenseKey extends GebReportingSpec {
         then:
             at InstallPlugins
         when:
-            sugested_plugins.click()
             sleep(5 * 1000)
-
-            to MastersTab
+            sugested_plugins.click()
         then:
             at MastersTab
     }
