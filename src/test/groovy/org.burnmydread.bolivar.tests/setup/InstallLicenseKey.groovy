@@ -41,9 +41,14 @@ class InstallLicenseKey extends GebReportingSpec {
             accept_terms.click()
             submit.click()
         then:
-            waitFor(360,0.5) {continue_button.present}
+            at InstallPlugins
         when:
+            sleep(5 * 1000)
             sugested_plugins.click()
+        then:
+            waitFor(360, 0.5) {continue_button.present}
+        when:
+            continue_button.click()
         then:
             at MastersTab
     }
