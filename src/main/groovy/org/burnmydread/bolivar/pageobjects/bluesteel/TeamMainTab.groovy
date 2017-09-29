@@ -12,7 +12,7 @@ class TeamMainTab extends Page {
 
     static at = {
         //Wait for all the items on the left side bar
-        waitFor(360,0.25) { side_bar.new_item.present }
+        waitFor(600,1.0) { side_bar.new_item.present }
         waitFor(10,0.01) { side_bar.people.present }
         waitFor(10,0.01) { side_bar.build_history.present }
         waitFor(10,0.01) { side_bar.manage_jenkins.present }
