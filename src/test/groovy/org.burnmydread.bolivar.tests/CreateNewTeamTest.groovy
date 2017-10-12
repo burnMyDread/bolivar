@@ -41,6 +41,7 @@ class CreateNewTeamTest extends GebReportingSpec {
             at BlueSteelTeams
             create_team_button.click()
         when:
+            report 'blue steel teams'
             at BlueSteelCreateTeam
             team_name_box = team_name
         then:
@@ -65,6 +66,7 @@ class CreateNewTeamTest extends GebReportingSpec {
             assert memory_size.text().trim() == '2048.0'
         when:
             mm_main_page.click()
+            report 'moving to team main tab'
         then:
             at TeamMainTab
             waitFor(10, 0.01) { side_bar.blue_ocean.present }
