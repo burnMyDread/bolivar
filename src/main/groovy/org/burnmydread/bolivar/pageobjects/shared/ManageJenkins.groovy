@@ -28,7 +28,7 @@ class ManageJenkins extends Page {
         waitFor(10,0.01) { manage_license.present }
         waitFor(10,0.01) { manage_users.present }
         waitFor(10,0.01) { script_approval.present }
-        waitFor(10,0.01) { prepare_for_shutdown.present }
+       // waitFor(10,0.01) { prepare_for_shutdown.present }
 
     }
     static content = {

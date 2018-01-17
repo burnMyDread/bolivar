@@ -11,7 +11,7 @@ class Login extends  Page {
 
     static url = System.properties.'bolivar.url'
     static at = {
-        waitFor(60,   0.25) { jenkins_nav_bar.present }
+        waitFor(60, 0.25) { jenkins_nav_bar.present }
         waitFor(10, 0.01)  { username_label.present }
         waitFor(10, 0.01)  { username_textbox.present }
         waitFor(10, 0.01)  { password_label.present }
