@@ -21,7 +21,7 @@ class CreateNewTeamTest extends GebReportingSpec {
 
     static team_name = System.properties.'bolivar.team_name' ?: 'bolivia'
 
-    def loginAndCreateNewTeam(){
+    def loginAndCreateNewTeam() {
         when:
             to Login
         then:
@@ -51,12 +51,15 @@ class CreateNewTeamTest extends GebReportingSpec {
         then:
             icon_select.click()
             create_team_button.click()
+            report 'team created'
         when:
             sleep(10000)
             to MastersTab
         then:
             at MastersTab
         when:
+            waitFor(10, 0.01) { side_bar.blue_ocean.present }
+            side_bar.blue_ocean.click()
             waitFor (120, 1) { created_team.team.present }
             created_team.manage.click()
         then:
@@ -64,6 +67,7 @@ class CreateNewTeamTest extends GebReportingSpec {
             assert disk_size.text().trim() == '20'
             assert cpu_shares.text().trim() == '0.2'
             assert memory_size.text().trim() == '2048.0'
+
         when:
             mm_main_page.click()
             report 'moving to team main tab'
