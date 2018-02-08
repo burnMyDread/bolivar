@@ -7,4 +7,3 @@ You need to have the geckodriver package installed or the browser creation will 
 
 # Running the tests:
 mvn test  -Dbolivar.password='password' -Dbolivar.username='username' -Dbolivar.url='cjoc url'
-
